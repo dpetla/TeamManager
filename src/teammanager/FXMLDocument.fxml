@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import customjavafxcontrols.NumberOnlyTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teammanager.FXMLDocumentController">
+   <children>
+      <SplitPane dividerPositions="0.2506265664160401" prefHeight="590.0" prefWidth="800.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #b8000d;">
+               <children>
+                  <ImageView fx:id="Logo_img" fitHeight="150.0" fitWidth="150.0" layoutX="26.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextField fx:id="Search_txtField" layoutX="8.0" layoutY="232.0" prefHeight="27.0" prefWidth="182.0" promptText="Search Player" />
+                  <ListView fx:id="players_list" layoutX="8.0" layoutY="301.0" prefHeight="280.0" prefWidth="182.0" />
+                  <ComboBox fx:id="position_cb" layoutX="8.0" layoutY="267.0" prefHeight="27.0" prefWidth="182.0" promptText="Position" />
+                  <Label layoutX="14.0" layoutY="183.0" prefHeight="26.0" prefWidth="182.0" text="TEAM MANAGER" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="588.0" prefWidth="585.0">
+               <children>
+                  <MenuBar prefHeight="17.0" prefWidth="594.0" style="-fx-background-color: FFFFFF;">
+                    <menus>
+                      <Menu mnemonicParsing="false" style="-fx-text-fill: ;" text="File">
+                        <items>
+                            <MenuItem fx:id="add_btn" mnemonicParsing="false" onAction="#addNewPlayerWindow" text="New Player" />
+                              <MenuItem fx:id="saveAll_btn" mnemonicParsing="false" onAction="#saveProject" text="Save project" />
+                              <MenuItem fx:id="export_btn" mnemonicParsing="false" onAction="#ExportButtonEvent" text="Save as" />
+                          <MenuItem fx:id="close_btn" mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                              <MenuItem fx:id="edit_s_btn" mnemonicParsing="false" onAction="#editPlayerButtonEvent" text="Edit Player" />
+                              <MenuItem fx:id="del_btn" mnemonicParsing="false" onAction="#DeleteButtonEvent" text="Delete Player" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <Pane layoutY="28.0" prefHeight="559.0" prefWidth="596.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="28.0">
+                     <children>
+                        <SplitPane dividerPositions="0.3484573502722323" orientation="VERTICAL" prefHeight="553.0" prefWidth="594.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="188.0" prefWidth="594.0" style="-fx-background-color: #262626;">
+                                 <children>
+                                    <ImageView fx:id="Player_img" fitHeight="184.0" fitWidth="144.0" layoutX="15.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ComboBox fx:id="editPosition_cb" layoutX="166.0" layoutY="73.0" prefHeight="27.0" prefWidth="215.0" promptText="Select Position" visible="false" />
+                                    <TextField fx:id="editNum_txt" layoutX="167.0" layoutY="125.0" prefHeight="27.0" prefWidth="72.0" promptText="Number" visible="false" />
+                                    <TextField fx:id="editName_txt" layoutX="166.0" layoutY="25.0" prefHeight="27.0" prefWidth="215.0" promptText="Enter player full name" visible="false" />
+                                    <Label fx:id="PNum_label" layoutX="163.0" layoutY="77.0" prefHeight="61.0" prefWidth="81.0" text="Num" textAlignment="CENTER" textFill="#eeeeee">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="PPosition_label" layoutX="246.0" layoutY="98.0" prefHeight="29.0" prefWidth="165.0" text="Position" textFill="#eeeeee">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="PName_label" layoutX="163.0" layoutY="29.0" prefHeight="49.0" prefWidth="297.0" text="Full Name" textAlignment="JUSTIFY" textFill="#eeeeee">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="editHeight_txt" layoutX="414.0" layoutY="25.0" prefHeight="27.0" prefWidth="123.0" promptText="Height (cm)" visible="false" />
+                                    <TextField fx:id="editWeight_txt" layoutX="415.0" layoutY="71.0" prefHeight="25.0" prefWidth="123.0" promptText="Weight (Kgs)" visible="false" />
+                                    <Label fx:id="PAge_label" layoutX="466.0" layoutY="125.0" prefHeight="23.0" prefWidth="95.0" text="age" textFill="#eeeeee">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="PWeight_label" layoutX="465.0" layoutY="75.0" prefHeight="23.0" prefWidth="95.0" text="weight" textFill="#eeeeee">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="PHeight_label" layoutX="466.0" layoutY="30.0" prefHeight="23.0" prefWidth="95.0" text="height" textFill="#eeeeee">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="editAge_txt" layoutX="416.0" layoutY="120.0" prefHeight="27.0" prefWidth="123.0" promptText="Age" visible="false" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="594.0" style="-fx-background-color: #242424;">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="293.0" prefWidth="587.0">
+                                       <children>
+                                          <HBox prefHeight="293.0" prefWidth="191.0">
+                                             <children>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="318.0" prefWidth="171.0">
+                                                   <children>
+                                                      <Label text="Games Played" textFill="#eeeeee">
+                                                         <padding>
+                                                            <Insets bottom="5.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <NumberOnlyTextField fx:id="gamesPlayed_tf">
+                                                         <VBox.margin>
+                                                            <Insets bottom="20.0" />
+                                                         </VBox.margin>
+                                                      </NumberOnlyTextField>
+                                                      <Label text="Shots to Goal" textFill="#eeeeee">
+                                                         <padding>
+                                                            <Insets bottom="5.0" top="20.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <NumberOnlyTextField fx:id="shotsToGoal_tf">
+                                                         <VBox.margin>
+                                                            <Insets bottom="20.0" />
+                                                         </VBox.margin>
+                                                      </NumberOnlyTextField>
+                                                      <Label text="Goals" textFill="#eeeeee">
+                                                         <padding>
+                                                            <Insets bottom="5.0" top="20.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <NumberOnlyTextField fx:id="goals_tf" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="111.0" layoutY="15.0" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="331.0" prefWidth="174.0">
+                                                   <children>
+                                                      <Label text="Assistances" textFill="#eeeeee">
+                                                         <padding>
+                                                            <Insets bottom="5.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <NumberOnlyTextField fx:id="assistances_tf">
+                                                         <VBox.margin>
+                                                            <Insets bottom="20.0" />
+                                                         </VBox.margin>
+                                                      </NumberOnlyTextField>
+                                                      <Label text="Tackles" textFill="#eeeeee">
+                                                         <padding>
+                                                            <Insets bottom="5.0" top="20.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <NumberOnlyTextField fx:id="tackles_tf">
+                                                         <VBox.margin>
+                                                            <Insets bottom="20.0" />
+                                                         </VBox.margin>
+                                                      </NumberOnlyTextField>
+                                                      <Label text="Wrong Passes" textFill="#eeeeee">
+                                                         <padding>
+                                                            <Insets bottom="5.0" top="20.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <NumberOnlyTextField fx:id="wrongPasses_tf" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="111.0" layoutY="15.0" prefHeight="293.0" prefWidth="191.0">
+                                             <children>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="280.0" prefWidth="163.0">
+                                                   <children>
+                                                      <Label text="Faults" textFill="#eeeeee">
+                                                         <padding>
+                                                            <Insets bottom="5.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <NumberOnlyTextField fx:id="faults_tf">
+                                                         <VBox.margin>
+                                                            <Insets bottom="20.0" />
+                                                         </VBox.margin>
+                                                      </NumberOnlyTextField>
+                                                      <Label text="Yellow Cards" textFill="#eeeeee">
+                                                         <padding>
+                                                            <Insets bottom="5.0" top="20.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <NumberOnlyTextField fx:id="yellowCards_tf">
+                                                         <VBox.margin>
+                                                            <Insets bottom="20.0" />
+                                                         </VBox.margin>
+                                                      </NumberOnlyTextField>
+                                                      <Label text="Red Cards" textFill="#eeeeee">
+                                                         <padding>
+                                                            <Insets bottom="5.0" top="20.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <NumberOnlyTextField fx:id="redCards_tf" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <Button fx:id="Save_btn" disable="true" layoutX="412.0" layoutY="306.0" mnemonicParsing="false" onAction="#saveEditPlayer_btn" prefHeight="27.0" prefWidth="133.0" text="Save">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Button>
+                                    <Button fx:id="Cancel_btn" disable="true" layoutX="218.0" layoutY="306.0" mnemonicParsing="false" onAction="#CancelEditStats_btn" prefHeight="27.0" prefWidth="133.0" text="Cancel">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></Button>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

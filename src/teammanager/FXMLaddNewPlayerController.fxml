@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import customjavafxcontrols.NumberOnlyTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="507.0" prefWidth="716.0" style="-fx-background-color: #242424;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teammanager.FXMLaddNewPlayerController">
+   <children>
+      <VBox alignment="CENTER_LEFT" layoutX="513.0" layoutY="180.0" prefHeight="189.0" prefWidth="150.0">
+         <children>
+            <Label text="Faults" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="faults_addTf">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </NumberOnlyTextField>
+            <Label text="Yellow Cards" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="yellowCards_addTf">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </NumberOnlyTextField>
+            <Label text="Red Cards" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="redCards_addTf" text="0" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" layoutX="339.0" layoutY="14.0" prefHeight="126.0" prefWidth="143.0">
+         <children>
+            <Label text="Jersey Number" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="jersey_addTf">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </NumberOnlyTextField>
+            <Label text="Age" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="age_addTf" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" layoutX="27.0" layoutY="14.0" prefHeight="126.0" prefWidth="261.0">
+         <children>
+            <Label text="Name *" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="name_addTf">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Position *" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="position_addCBox" prefHeight="27.0" prefWidth="262.0" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" layoutX="569.0" layoutY="14.0" prefHeight="126.0" prefWidth="94.0">
+         <children>
+            <Label text="Height" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="height_addTf">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </NumberOnlyTextField>
+            <Label text="Weight" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="weight_addTf" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" layoutX="271.0" layoutY="180.0" prefHeight="189.0" prefWidth="150.0">
+         <children>
+            <Label text="Assistances" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="assistances_addTf">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </NumberOnlyTextField>
+            <Label text="Tackles" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="tackles_addTf">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </NumberOnlyTextField>
+            <Label text="Wrong Passes" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="wrongPasses_addTf" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" layoutX="27.0" layoutY="180.0" prefHeight="196.0" prefWidth="150.0">
+         <children>
+            <Label text="Games Played" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="gamesPlayed_addTf">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </NumberOnlyTextField>
+            <Label text="Shots to Goal" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="shotsToGoal_addTf">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </NumberOnlyTextField>
+            <Label text="Goals" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <NumberOnlyTextField fx:id="goals_addTf" />
+         </children>
+      </VBox>
+      <Button fx:id="saveNewPlayer_btn" layoutX="598.0" layoutY="444.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="65.0" text="Add">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="chooseImage_btn" layoutX="149.0" layoutY="444.0" mnemonicParsing="false" text="Choose Image *">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="cancelAdd_btn" layoutX="513.0" layoutY="444.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="71.0" text="Cancel">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <ImageView fx:id="playerPreview_img" fitHeight="108.0" fitWidth="106.0" layoutX="27.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
