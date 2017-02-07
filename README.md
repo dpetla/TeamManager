@@ -11,6 +11,15 @@ I created a team manager for a soccer team with the following features:
 * search player by name
 * filter players by position
 
+##Screenshots
+![alt text](https://github.com/dpetla/JavaFx/blob/master/imgs/TeamManager1.jpg "Entry screen")
+![alt text](https://github.com/dpetla/JavaFx/blob/master/imgs/TeamManager2.jpg "File Options")
+![alt text](https://github.com/dpetla/JavaFx/blob/master/imgs/TeamManager3.jpg "Edit player")
+![alt text](https://github.com/dpetla/JavaFx/blob/master/imgs/TeamManager4.jpg "Search player by name")
+![alt text](https://github.com/dpetla/JavaFx/blob/master/imgs/TeamManager5.jpg "add new player window")
+![alt text](https://github.com/dpetla/JavaFx/blob/master/imgs/TeamManager6.jpg "Export players data")
+
+
 ##Project Instructions:
 Write a program that uses a GUI to allow the user to view records in a file. You decide what you want to keep track of (media such as book/movie/cd collection, inventory in a store, members of a group or organization, etc). Your program must include the following:
 
