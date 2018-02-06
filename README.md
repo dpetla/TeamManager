@@ -1,6 +1,6 @@
 # JavaFx
 
-This is was an JavaFX project I did in my 'Object Oriented Programming 2 - Java' class.
+This is was an JavaFX project I worked on my 'Object Oriented Programming 2 - Java' class.
 I created a team manager for a soccer team with the following features:
 * load players and statistics from local file
 * save chages to local file
@@ -11,7 +11,7 @@ I created a team manager for a soccer team with the following features:
 * search player by name
 * filter players by position
 
-##Screenshots
+## Screenshots
 ![alt text](https://github.com/dpetla/JavaFx/blob/master/imgs/TeamManager1.jpg "Entry screen")
 ![alt text](https://github.com/dpetla/JavaFx/blob/master/imgs/TeamManager2.jpg "File Options")
 ![alt text](https://github.com/dpetla/JavaFx/blob/master/imgs/TeamManager3.jpg "Edit player")
@@ -20,7 +20,7 @@ I created a team manager for a soccer team with the following features:
 ![alt text](https://github.com/dpetla/JavaFx/blob/master/imgs/TeamManager6.jpg "Export players data")
 
 
-##Project Instructions:
+## Project Instructions:
 Write a program that uses a GUI to allow the user to view records in a file. You decide what you want to keep track of (media such as book/movie/cd collection, inventory in a store, members of a group or organization, etc). Your program must include the following:
 
 * A file that contains records used in your program (you can use a sequential file or a random access file).
