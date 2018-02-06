@@ -1,4 +1,4 @@
-# TeamManager
+# Team Manager
 
 This is was an JavaFX project I worked on my 'Object Oriented Programming 2 - Java' class.
 I created a team manager for a soccer team with the following features:
